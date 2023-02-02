@@ -15,10 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     
-
+    //1
     var dateActive = Date()
-    var counter = 0
-//    var dateActive = Date()
     var dateBackground = Date()
     var dateFormatter = DateFormatter()
 
@@ -29,7 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         
-        //formatter.string(from: Date())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -38,6 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
         print(#function)
+        
     }
     
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -45,19 +43,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to undo the changes made on entering the background.
         print(#function)
     }
+    
 
+    //1
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
         print(#function)
-
-//        dateActive = Date()
-//        dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "HH:mm:ss"
-//
-//        let result1 = dateFormatter.string(from: dateActive)
-//        print("Время запуска сцены - \(result1)")
-         
          
     }
 
@@ -66,19 +58,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This may occur due to temporary interruptions (ex. an incoming phone call).
         print(#function)
         
-//        dateBackground = Date()
-//
-//        dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "HH:mm:ss"
-//
-//        let result2 = dateFormatter.string(from: dateBackground)
-//        print("Время запуска сцены - \(result2)")
-//
-//        let timeInterval = dateBackground.timeIntervalSince(dateActive)
-//        let formater = String(format: "%.3f", timeInterval)
-//        print("Время, прошедшее между двумя состояниями сцены - \(formater) сек.")
-        
-        
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -86,6 +65,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
         print(#function)
+        
     }
 
 

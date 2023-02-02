@@ -1,0 +1,27 @@
+    var dateLaunch: Date!
+    var firstTimeLaunch: Bool!
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        print(#function)
+        
+        //UserDefaults.standard.set(false, forKey: "firstTimeLaunch")
+        firstTimeLaunch = UserDefaults.standard.bool(forKey: "firstTimeLaunch")
+
+        if (firstTimeLaunch){
+            firstTimeLaunch = true
+            dateLaunch = Date()
+            UserDefaults.standard.set(dateLaunch.timeIntervalSince1970,forKey: "lastLaunchDate")
+            let first = Date(timeIntervalSince1970: UserDefaults.standard.double(forKey: "firstLaunchDate"))
+            let last = Date(timeIntervalSince1970: UserDefaults.standard.double(forKey: "lastLaunchDate"))
+            let timeInterval = last.timeIntervalSince(first)
+            let formater = String(format: "%.3f", timeInterval)
+            print("Время, прошедшее между первым и последним запусками приложения - \(formater) сек.")
+        }
+        else {
+            UserDefaults.standard.set(true, forKey: "firstTimeLaunch")
+            dateLaunch = Date()
+            UserDefaults.standard.set(dateLaunch.timeIntervalSince1970,forKey: "firstLaunchDate")
+        }
+
+}
+

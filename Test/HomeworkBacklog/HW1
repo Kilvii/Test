@@ -1,0 +1,29 @@
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        print(#function)
+
+        dateActive = Date()
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+        let result1 = dateFormatter.string(from: dateActive)
+        print("Время запуска сцены - \(result1)")
+         
+         
+    }
+
+    func sceneWillResignActive(_ scene: UIScene) {
+        print(#function)
+        
+        dateBackground = Date()
+
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+
+        let result2 = dateFormatter.string(from: dateBackground)
+        print("Время запуска сцены - \(result2)")
+
+        let timeInterval = dateBackground.timeIntervalSince(dateActive)
+        let formater = String(format: "%.3f", timeInterval)
+        print("Время, прошедшее между двумя состояниями сцены - \(formater) сек.")
+        
+        
+    }
