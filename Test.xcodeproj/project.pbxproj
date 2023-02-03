@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7C4840298ABD0300E399DB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C483F298ABD0300E399DB /* Profile.swift */; };
+		CE7C4843298AC2EC00E399DB /* DateStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C4842298AC2EC00E399DB /* DateStorage.swift */; };
+		CE7C4845298AC35700E399DB /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C4844298AC35700E399DB /* UserDefaultsStorage.swift */; };
+		CE7C4847298AC5FC00E399DB /* Assembly+DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C4846298AC5FC00E399DB /* Assembly+DataStorage.swift */; };
+		CE82B47A277FD27A00272305 /* HW1 in Resources */ = {isa = PBXBuildFile; fileRef = CE82B479277FD27A00272305 /* HW1 */; };
+		CE83CCC5298C72030011A140 /* HW3 in Resources */ = {isa = PBXBuildFile; fileRef = CE83CCC4298C72030011A140 /* HW3 */; };
+		CE83CCC7298C724F0011A140 /* HW2 in Resources */ = {isa = PBXBuildFile; fileRef = CE83CCC6298C724F0011A140 /* HW2 */; };
 		CEEAD7F229818B9300846440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAD7F129818B9300846440 /* AppDelegate.swift */; };
 		CEEAD7F429818B9300846440 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAD7F329818B9300846440 /* SceneDelegate.swift */; };
 		CEEAD7F629818B9300846440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAD7F529818B9300846440 /* ViewController.swift */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE7C483F298ABD0300E399DB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		CE7C4842298AC2EC00E399DB /* DateStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStorage.swift; sourceTree = "<group>"; };
+		CE7C4844298AC35700E399DB /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		CE7C4846298AC5FC00E399DB /* Assembly+DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembly+DataStorage.swift"; sourceTree = "<group>"; };
+		CE82B479277FD27A00272305 /* HW1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = HW1; sourceTree = "<group>"; };
+		CE83CCC4298C72030011A140 /* HW3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = HW3; sourceTree = "<group>"; };
+		CE83CCC6298C724F0011A140 /* HW2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = HW2; sourceTree = "<group>"; };
 		CEEAD7EE29818B9300846440 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEAD7F129818B9300846440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEAD7F329818B9300846440 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +57,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7C483E298ABCD600E399DB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C483F298ABD0300E399DB /* Profile.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CE7C4841298AC2D700E399DB /* DateStorage */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C4842298AC2EC00E399DB /* DateStorage.swift */,
+				CE7C4844298AC35700E399DB /* UserDefaultsStorage.swift */,
+			);
+			path = DateStorage;
+			sourceTree = "<group>";
+		};
+		CE82B477277FD19B00272305 /* HomeworkBacklog */ = {
+			isa = PBXGroup;
+			children = (
+				CE82B479277FD27A00272305 /* HW1 */,
+				CE83CCC6298C724F0011A140 /* HW2 */,
+				CE83CCC4298C72030011A140 /* HW3 */,
+			);
+			path = HomeworkBacklog;
+			sourceTree = "<group>";
+		};
 		CEEAD7E529818B9300846440 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +103,9 @@
 		CEEAD7F029818B9300846440 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				CE82B477277FD19B00272305 /* HomeworkBacklog */,
+				CE7C4841298AC2D700E399DB /* DateStorage */,
+				CE7C483E298ABCD600E399DB /* Entity */,
 				CEF43A9729842B8800AF2A67 /* Assembly */,
 				CEF43A942984249D00AF2A67 /* Utils */,
 				CEEAD7F129818B9300846440 /* AppDelegate.swift */,
@@ -88,6 +132,7 @@
 			children = (
 				CEF43A9829842BA000AF2A67 /* Assembly.swift */,
 				CEF43A9A29842C1E00AF2A67 /* Assembly+Formatters.swift */,
+				CE7C4846298AC5FC00E399DB /* Assembly+DataStorage.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -150,9 +195,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE83CCC7298C724F0011A140 /* HW2 in Resources */,
 				CEEAD7FE29818B9500846440 /* LaunchScreen.storyboard in Resources */,
 				CEEAD7FB29818B9500846440 /* Assets.xcassets in Resources */,
 				CEEAD7F929818B9300846440 /* Main.storyboard in Resources */,
+				CE83CCC5298C72030011A140 /* HW3 in Resources */,
+				CE82B47A277FD27A00272305 /* HW1 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,9 +214,13 @@
 				CEF43A96298424C500AF2A67 /* DateFormatter.swift in Sources */,
 				CEF43A9929842BA000AF2A67 /* Assembly.swift in Sources */,
 				CEF43A9B29842C1E00AF2A67 /* Assembly+Formatters.swift in Sources */,
+				CE7C4840298ABD0300E399DB /* Profile.swift in Sources */,
 				CEEAD7F629818B9300846440 /* ViewController.swift in Sources */,
+				CE7C4847298AC5FC00E399DB /* Assembly+DataStorage.swift in Sources */,
 				CEEAD7F229818B9300846440 /* AppDelegate.swift in Sources */,
 				CEEAD7F429818B9300846440 /* SceneDelegate.swift in Sources */,
+				CE7C4845298AC35700E399DB /* UserDefaultsStorage.swift in Sources */,
+				CE7C4843298AC2EC00E399DB /* DateStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

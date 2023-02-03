@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var dateLaunch: Date!
     
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print(#function)
         
@@ -36,12 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
         let userDefaultsStorage = UserDefaultsStorage(encoder: encoder, decoder: decoder, userDefaults: userDefaults)
         
-        //UserDefaults.standard.set(false, forKey: StorageKey.existProfile.rawValue)
+        //UserDefaults.standard.set(nil, forKey: StorageKey.profile.rawValue)
         
-        let existedProfile = userDefaults.bool(forKey: StorageKey.existProfile.rawValue)
-        
-        if(existedProfile){
-            let data = userDefaults.data(forKey: StorageKey.profile.rawValue)
+        if(userDefaultsStorage.userExist(key: StorageKey.profile.rawValue)){
 
             if let user: Profile = userDefaultsStorage.value(key: StorageKey.profile.rawValue) {
                 print("\n\(user)\n")
@@ -51,7 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else{
             let user = Profile(id: "1",name: "Alex")
             userDefaultsStorage.save(value: user, key: StorageKey.profile.rawValue)
-            userDefaults.set(true, forKey: StorageKey.existProfile.rawValue)
         }
         
         /*

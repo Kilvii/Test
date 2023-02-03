@@ -35,4 +35,12 @@ final class UserDefaultsStorage: DataStorage {
         return try? decoder.decode(Value.self, from: data)
     }
     
+    func userExist(key: String) -> Bool{
+        guard let _ = userDefaults.object(forKey: key)
+        else{
+            return false
+        }
+        return true
+    }
+    
 }
