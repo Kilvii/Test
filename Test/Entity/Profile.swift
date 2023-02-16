@@ -11,6 +11,8 @@ struct Profile: Codable {
     typealias ID = String
     
     let id: ID
-    let name: String
+    let firstName: String?
+    let lastName: String?
+    let birthDay: Date?
 }
 

@@ -22,11 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var formatter = assembly.dateFormatter(format: .HHmmss)
     lazy var dataStorage = assembly.dataStorage
+    lazy var apiClient = assembly.apiClient
     
     var dateLaunch: Date!
     
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print(#function)
+        //print(#function)
         
         let userDefaults = UserDefaults.standard
         let encoder = JSONEncoder()
@@ -35,20 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
         let userDefaultsStorage = UserDefaultsStorage(encoder: encoder, decoder: decoder, userDefaults: userDefaults)
         
-        //UserDefaults.standard.set(nil, forKey: StorageKey.profile.rawValue)
-        
-        if(userDefaultsStorage.userExist(key: StorageKey.profile.rawValue)){
+        apiClient.profile() {
+            result in switch result {
+            case .success(let info):
 
-            if let user: Profile = userDefaultsStorage.value(key: StorageKey.profile.rawValue) {
-                print("\n\(user)\n")
+                userDefaultsStorage.save(value: info?.data?.profile, key: "First")
+                print(info!.data!.profile!)
+            case .failure(let error):
+                print("You have a \(error)")
             }
+                
+        }
 
-        }
-        else{
-            let user = Profile(id: "1",name: "Alex")
-            userDefaultsStorage.save(value: user, key: StorageKey.profile.rawValue)
-        }
-        
         /*
         guard let data = try? encoder.encode(Profile(id: "121", name: "text"))
         else{
@@ -62,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication){
-        print(#function)
+        //print(#function)
     }
 
     // MARK: UISceneSession Lifecycle

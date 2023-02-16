@@ -14,6 +14,12 @@
 		CE82B47A277FD27A00272305 /* HW1 in Resources */ = {isa = PBXBuildFile; fileRef = CE82B479277FD27A00272305 /* HW1 */; };
 		CE83CCC5298C72030011A140 /* HW3 in Resources */ = {isa = PBXBuildFile; fileRef = CE83CCC4298C72030011A140 /* HW3 */; };
 		CE83CCC7298C724F0011A140 /* HW2 in Resources */ = {isa = PBXBuildFile; fileRef = CE83CCC6298C724F0011A140 /* HW2 */; };
+		CEE5415A298D5A72006E7756 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE54159298D5A72006E7756 /* ApiClient.swift */; };
+		CEE5415D298D5B16006E7756 /* Profile.json in Resources */ = {isa = PBXBuildFile; fileRef = CEE5415C298D5B16006E7756 /* Profile.json */; };
+		CEE5415F298D5D62006E7756 /* ProfileResponseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5415E298D5D62006E7756 /* ProfileResponseDate.swift */; };
+		CEE54161298D5DBD006E7756 /* ApiErrorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE54160298D5DBD006E7756 /* ApiErrorData.swift */; };
+		CEE54163298D5E0E006E7756 /* ResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE54162298D5E0E006E7756 /* ResponseBody.swift */; };
+		CEE54165298D60D1006E7756 /* Assembly+ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE54164298D60D1006E7756 /* Assembly+ApiClient.swift */; };
 		CEEAD7F229818B9300846440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAD7F129818B9300846440 /* AppDelegate.swift */; };
 		CEEAD7F429818B9300846440 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAD7F329818B9300846440 /* SceneDelegate.swift */; };
 		CEEAD7F629818B9300846440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAD7F529818B9300846440 /* ViewController.swift */; };
@@ -33,6 +39,12 @@
 		CE82B479277FD27A00272305 /* HW1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = HW1; sourceTree = "<group>"; };
 		CE83CCC4298C72030011A140 /* HW3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = HW3; sourceTree = "<group>"; };
 		CE83CCC6298C724F0011A140 /* HW2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = HW2; sourceTree = "<group>"; };
+		CEE54159298D5A72006E7756 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		CEE5415C298D5B16006E7756 /* Profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Profile.json; sourceTree = "<group>"; };
+		CEE5415E298D5D62006E7756 /* ProfileResponseDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseDate.swift; sourceTree = "<group>"; };
+		CEE54160298D5DBD006E7756 /* ApiErrorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorData.swift; sourceTree = "<group>"; };
+		CEE54162298D5E0E006E7756 /* ResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBody.swift; sourceTree = "<group>"; };
+		CEE54164298D60D1006E7756 /* Assembly+ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembly+ApiClient.swift"; sourceTree = "<group>"; };
 		CEEAD7EE29818B9300846440 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEAD7F129818B9300846440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEAD7F329818B9300846440 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,9 @@
 			isa = PBXGroup;
 			children = (
 				CE7C483F298ABD0300E399DB /* Profile.swift */,
+				CEE5415E298D5D62006E7756 /* ProfileResponseDate.swift */,
+				CEE54160298D5DBD006E7756 /* ApiErrorData.swift */,
+				CEE54162298D5E0E006E7756 /* ResponseBody.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -84,11 +99,27 @@
 			path = HomeworkBacklog;
 			sourceTree = "<group>";
 		};
+		CEE54158298D5A55006E7756 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				CEE54159298D5A72006E7756 /* ApiClient.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		CEE5415B298D5AEE006E7756 /* Resorces */ = {
+			isa = PBXGroup;
+			children = (
+				CEE5415C298D5B16006E7756 /* Profile.json */,
+			);
+			path = Resorces;
+			sourceTree = "<group>";
+		};
 		CEEAD7E529818B9300846440 = {
 			isa = PBXGroup;
 			children = (
-				CEEAD7F029818B9300846440 /* Test */,
 				CEEAD7EF29818B9300846440 /* Products */,
+				CEEAD7F029818B9300846440 /* Test */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +134,8 @@
 		CEEAD7F029818B9300846440 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				CEE5415B298D5AEE006E7756 /* Resorces */,
+				CEE54158298D5A55006E7756 /* ApiClient */,
 				CE82B477277FD19B00272305 /* HomeworkBacklog */,
 				CE7C4841298AC2D700E399DB /* DateStorage */,
 				CE7C483E298ABCD600E399DB /* Entity */,
@@ -133,6 +166,7 @@
 				CEF43A9829842BA000AF2A67 /* Assembly.swift */,
 				CEF43A9A29842C1E00AF2A67 /* Assembly+Formatters.swift */,
 				CE7C4846298AC5FC00E399DB /* Assembly+DataStorage.swift */,
+				CEE54164298D60D1006E7756 /* Assembly+ApiClient.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -195,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE5415D298D5B16006E7756 /* Profile.json in Resources */,
 				CE83CCC7298C724F0011A140 /* HW2 in Resources */,
 				CEEAD7FE29818B9500846440 /* LaunchScreen.storyboard in Resources */,
 				CEEAD7FB29818B9500846440 /* Assets.xcassets in Resources */,
@@ -211,15 +246,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE54163298D5E0E006E7756 /* ResponseBody.swift in Sources */,
+				CEE54165298D60D1006E7756 /* Assembly+ApiClient.swift in Sources */,
+				CEE5415A298D5A72006E7756 /* ApiClient.swift in Sources */,
 				CEF43A96298424C500AF2A67 /* DateFormatter.swift in Sources */,
 				CEF43A9929842BA000AF2A67 /* Assembly.swift in Sources */,
 				CEF43A9B29842C1E00AF2A67 /* Assembly+Formatters.swift in Sources */,
 				CE7C4840298ABD0300E399DB /* Profile.swift in Sources */,
 				CEEAD7F629818B9300846440 /* ViewController.swift in Sources */,
+				CEE5415F298D5D62006E7756 /* ProfileResponseDate.swift in Sources */,
 				CE7C4847298AC5FC00E399DB /* Assembly+DataStorage.swift in Sources */,
 				CEEAD7F229818B9300846440 /* AppDelegate.swift in Sources */,
 				CEEAD7F429818B9300846440 /* SceneDelegate.swift in Sources */,
 				CE7C4845298AC35700E399DB /* UserDefaultsStorage.swift in Sources */,
+				CEE54161298D5DBD006E7756 /* ApiErrorData.swift in Sources */,
 				CE7C4843298AC2EC00E399DB /* DateStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

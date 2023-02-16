@@ -12,10 +12,9 @@ extension Assembly {
         UserDefaultsStorage(encoder: JSONEncoder(), decoder: JSONDecoder(), userDefaults: UserDefaults.standard)
     }
 }
-
-private var encoder: JSONEncoder {
+var encoder: JSONEncoder {
     JSONEncoder()
 }
-private var decoder: JSONDecoder {
+var decoder: JSONDecoder {
     JSONDecoder()
 }
